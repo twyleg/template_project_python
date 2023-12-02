@@ -23,6 +23,7 @@ def rename(project_name: str) -> None:
     replace_string_in_file(FILE_DIR / "MANIFEST.in", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "setup.cfg", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "setup.py", TEMPLATE_NAME, project_name)
+    replace_string_in_file(FILE_DIR / "tox.ini", TEMPLATE_NAME, project_name)
 
     Path(FILE_DIR / TEMPLATE_NAME).rename(FILE_DIR / project_name)
 
