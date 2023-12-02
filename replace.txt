@@ -1,0 +1,13 @@
+docs/index.rst, Python Project Template
+docs/conf.py, inkscape_layer_utils
+docs/conf.py, Inkscape Layer Utils
+template_project_python/__main__.py, inkscape_layer_utils
+template_project_python/__main__.py, template_project_python
+tests/test_example.py, inkscape_layer_utils
+.gitattributes,
+MAINIFEST.in, inkscape_layer_utils
+README.rst, Inkscape Layer Utils
+setup.cfg, inkscape_layer_utils
+setup.py, inkscape_layer_utils
+tox.ini, inkscape_layer_utils
+tox.ini, inkscape_layer_utils
