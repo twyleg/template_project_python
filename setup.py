@@ -24,6 +24,7 @@ setup(
     url="https://github.com/twyleg/template_project_python",
     packages=find_packages(),
     long_description=read_long_description(),
+    include_package_data=True,
     install_requires=[],
     entry_points={
         "console_scripts": [
