@@ -19,7 +19,6 @@ class ExampleTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.output_dir_path = self.prepare_output_directory()
-        self.test_image = self.prepare_test_image()
 
     def test_ArrangedState_Action_Assertion(self):
         self.assertTrue(True)
