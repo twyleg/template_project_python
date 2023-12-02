@@ -13,21 +13,21 @@ def read_long_description() -> str:
 
 
 setup(
-    name="inkscape_layer_utils",
+    name="template_project_python",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="Torsten Wylegala",
     author_email="mail@twyleg.de",
-    description=("Simple library to extract and manipulate layers in inkscape SVGs"),
+    description=(""),
     license="GPL 3.0",
-    keywords="inkscape svg layer utilities",
-    url="https://github.com/twyleg/inkscape_layer_utils",
+    keywords="",
+    url="https://github.com/twyleg/template_project_python",
     packages=find_packages(),
     long_description=read_long_description(),
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "inkscape_layer_utils = inkscape_layer_utils.main:main",
+            "template_project_python = template_project_python.main:main",
         ]
     },
 )

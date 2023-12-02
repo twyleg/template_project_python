@@ -1,5 +1,5 @@
-Python Project Template
-====================
+template_project_python
+=======================
 
 Lorem ipsum
 

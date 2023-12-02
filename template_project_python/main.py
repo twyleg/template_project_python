@@ -1,13 +1,18 @@
 # Copyright (C) 2023 twyleg
 import sys
 import argparse
+import logging
 
 from template_project_python import __version__
 
+FORMAT = "[%(asctime)s][%(levelname)s][%(name)s]: %(message)s"
+
 
 def main() -> None:
-    parser = argparse.ArgumentParser(usage="inkscape_layer_utils <command> [<args>] <track_file>")
-    parser.add_argument("command", help="track_generator commands")
+
+    logging.basicConfig(stream=sys.stdout, format=FORMAT, level=logging.INFO)
+
+    parser = argparse.ArgumentParser(usage="template_project_python <command> [<args>] <files>")
     parser.add_argument(
         "-v",
         "--version",
@@ -16,7 +21,6 @@ def main() -> None:
         version=__version__,
     )
     args = parser.parse_args(sys.argv[1:2])
-
 
 
 if __name__ == "__main__":

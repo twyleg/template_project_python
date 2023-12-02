@@ -1,7 +1,7 @@
 include README.rst
 include LICENSE
 include requirements.txt
-graft inkscape_layer_utils
+graft template_project_python
 recursive-exclude * *.py[co]
 include versioneer.py
-include inkscape_layer_utils/_version.py
+include template_project_python/_version.py

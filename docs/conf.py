@@ -1,4 +1,4 @@
-from inkscape_layer_utils import __version__
+from template_project_python import __version__
 
 extensions = [
     "sphinx.ext.autodoc",
@@ -9,7 +9,7 @@ extensions = [
 html_theme = "sphinx_rtd_theme"
 
 master_doc = "index"
-project = "Inkscape Layer Utils"
+project = "template_project_python"
 copyright = "2023, twyleg"
 author = "Torsten Wylegala"
 version = release = __version__

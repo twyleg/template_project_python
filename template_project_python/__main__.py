@@ -1,4 +1,4 @@
 # Copyright (C) 2023 twyleg
-from inkscape_layer_utils.main import main
+from template_project_python.main import main
 
 main()
