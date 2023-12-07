@@ -13,7 +13,7 @@ def read_long_description() -> str:
 
 
 setup(
-    name="template_project_python",
+    name="template_project_utils",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="Torsten Wylegala",
@@ -21,7 +21,7 @@ setup(
     description=(""),
     license="GPL 3.0",
     keywords="",
-    url="https://github.com/twyleg/template_project_python",
+    url="https://github.com/twyleg/template_project_utils",
     packages=find_packages(),
     long_description=read_long_description(),
     long_description_content_type="text/markdown",
@@ -29,7 +29,7 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "template_project_python = template_project_python.main:main",
+            "template_project_utils = template_project_utils.main:main",
         ]
     },
 )

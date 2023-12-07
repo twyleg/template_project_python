@@ -19,7 +19,7 @@ def rename(project_name: str) -> None:
     replace_string_in_file(FILE_DIR / "template_project_python/__main__.py", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "template_project_python/main.py", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / ".gitattributes", TEMPLATE_NAME, project_name)
-    replace_string_in_file(FILE_DIR / "README.rst", TEMPLATE_NAME, project_name)
+    replace_string_in_file(FILE_DIR / "README.md", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "MANIFEST.in", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "setup.cfg", TEMPLATE_NAME, project_name)
     replace_string_in_file(FILE_DIR / "setup.py", TEMPLATE_NAME, project_name)

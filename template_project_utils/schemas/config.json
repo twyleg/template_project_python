@@ -1,0 +1,53 @@
+{
+  "type": ["object", "null"],
+  "properties": {
+    "update_files": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "patternProperties": {
+          ".+": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "patternProperties": {
+                ".+": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rename_files": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "patternProperties": {
+          ".+": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "remove_files": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "remove_dirs": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+  ],
+  "additionalProperties": false
+}

@@ -1,4 +1,4 @@
-template_project_python
+template_project_utils
 =======================
 
 Lorem ipsum

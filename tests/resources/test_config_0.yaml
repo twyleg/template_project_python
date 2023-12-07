@@ -1,0 +1,18 @@
+update_files:
+  - file/path/0:
+    - "stringA": "stringB"
+    - "stringC": "stringB"
+  - file/path/1:
+    - "stringA": "stringB"
+
+rename_files:
+  - file/path/2: file/path/3
+  - file/path/4: file/path/5
+
+remove_files:
+  - file/to/remove/A
+  - file/to/remove/B
+
+remove_dirs:
+  - dir/to/remove/A
+  - dir/to/remove/B
