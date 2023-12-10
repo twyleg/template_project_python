@@ -9,7 +9,6 @@ FORMAT = "[%(asctime)s][%(levelname)s][%(name)s]: %(message)s"
 
 
 def main() -> None:
-
     logging.basicConfig(stream=sys.stdout, format=FORMAT, level=logging.INFO)
 
     parser = argparse.ArgumentParser(usage="template_project_python <command> [<args>] <files>")
