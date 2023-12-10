@@ -1,0 +1,23 @@
+placeholder: template_project_python
+
+update_files:
+  - docs/index.rst
+  - docs/conf.py
+  - .gitattributes
+  - README.md
+  - MANIFEST.in
+  - setup.cfg
+  - setup.py
+  - tox.ini
+  - template_project_python/__main__.py
+  - template_project_python/main.py
+
+rename_files:
+
+rename_dirs:
+  - template_project_python/
+
+remove_files:
+  - template_config.yaml
+
+remove_dirs:
