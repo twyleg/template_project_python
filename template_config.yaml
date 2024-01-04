@@ -9,8 +9,10 @@ update_files:
   - setup.cfg
   - setup.py
   - tox.ini
+  - pyinstaller.spec
   - template_project_python/__main__.py
   - template_project_python/main.py
+  - scripts/pyinstaller_entry_point.py
 
 rename_files:
 
