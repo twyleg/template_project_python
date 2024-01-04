@@ -18,7 +18,7 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     author="Torsten Wylegala",
     author_email="mail@twyleg.de",
-    description=(""),
+    description="",
     license="GPL 3.0",
     keywords="",
     url="https://github.com/twyleg/template_project_python",

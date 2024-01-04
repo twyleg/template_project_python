@@ -1,7 +1,8 @@
-include README.rst
+include README.md
 include LICENSE
 include requirements.txt
 graft template_project_python
 recursive-exclude * *.py[co]
 include versioneer.py
 include template_project_python/_version.py
+include template_project_python/resources/*.txt

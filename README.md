@@ -1,4 +1,4 @@
-[![Build status](https://github.com/twyleg/template_project_python/actions/workflows/checks.yml/badge.svg)]()
+[![Build status](https://github.com/twyleg/template_project_python/actions/workflows/tests.yaml/badge.svg)]()
 [![GitHub latest commit](https://badgen.net/github/last-commit/twyleg/template_project_python)](https://GitHub.com/twyleg/template_project_python/commit/)
 [![PyPI download month](https://img.shields.io/pypi/dm/template-project-python)](https://pypi.python.org/pypi/template-project-python/)
 [![PyPi version](https://badgen.net/pypi/v/template-project-python/)](https://pypi.org/project/template-project-python)
