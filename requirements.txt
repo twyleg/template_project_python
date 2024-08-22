@@ -6,4 +6,12 @@ black~=23.11.0
 tox~=4.11.4
 versioneer~=0.29
 pyinstaller
+
+sphinx
+sphinx-rtd-theme
+sphinx-copybutton
+sphinx-autobuild
+sphinxcontrib.asciinema
+furo
+
 template-project-utils
