@@ -26,7 +26,7 @@ setup(
     long_description=read_long_description(),
     long_description_content_type="text/markdown",
     include_package_data=True,
-    install_requires=[],
+    install_requires=["pyyaml~=6.0.2"],
     entry_points={
         "console_scripts": [
             "template_project_python = template_project_python.main:main",

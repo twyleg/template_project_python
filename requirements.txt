@@ -8,5 +8,6 @@ versioneer~=0.29
 pytest~=8.3.2
 pyinstaller~=6.10.0
 pyyaml~=6.0.2
+types-PyYAML~=6.0.12.20240808
 
 template-project-utils~=0.1.0

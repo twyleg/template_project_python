@@ -15,7 +15,6 @@ FILE_DIR = Path(__file__).parent
 
 
 class TestExample:
-
     def test_ValidreferenceLightMatrix_Read_Success(self, caplog, tmp_path):
         logging.info("Tmp path: %s", tmp_path)
         assert 1 == 1

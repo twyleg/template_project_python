@@ -32,7 +32,7 @@ def init_argparser() -> argparse.Namespace:
 
 def init_logging() -> None:
     try:
-        with open(LOGGING_CONFIG_NAME, 'r') as f:
+        with open(LOGGING_CONFIG_NAME, "r") as f:
             d = yaml.safe_load(f)
             logging.config.dictConfig(d)
         logger.info("Logging config loaded from file: %s", LOGGING_CONFIG_NAME)
