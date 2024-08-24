@@ -1,7 +1,7 @@
-# Copyright (C) 2023 twyleg
-import unittest
-import tempfile
+# Copyright (C) 2024 twyleg
+import pytest
 
+import logging
 from pathlib import Path
 
 
@@ -11,18 +11,11 @@ from pathlib import Path
 #
 
 
-class ExampleTestCase(unittest.TestCase):
-    @classmethod
-    def prepare_output_directory(cls) -> Path:
-        tmp_dir = tempfile.mkdtemp()
-        return Path(tmp_dir)
-
-    def setUp(self) -> None:
-        self.output_dir_path = self.prepare_output_directory()
-
-    def test_ArrangedState_Action_Assertion(self):
-        self.assertTrue(True)
+FILE_DIR = Path(__file__).parent
 
 
-if __name__ == "__main__":
-    unittest.main()
+class TestExample:
+
+    def test_ValidreferenceLightMatrix_Read_Success(self, caplog, tmp_path):
+        logging.info("Tmp path: %s", tmp_path)
+        assert 1 == 1
