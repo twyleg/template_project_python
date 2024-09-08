@@ -1,58 +1,40 @@
-# Copyright (C) 2023 twyleg
-import os
+# Copyright (C) 2024 twyleg
 import sys
 import argparse
-import logging
-import logging.config
-import yaml
 
 from pathlib import Path
+from simple_python_app.generic_application import GenericApplication
+
 from template_project_python import __version__
+
 
 FILE_DIR = Path(__file__).parent
 
-LOGGING_CONFIG_NAME = "logging.yaml"
-LOGGING_DEFAULT_FORMAT = "[%(asctime)s][%(levelname)s][%(name)s]: %(message)s"
 
+class Application(GenericApplication):
 
-logger = logging.getLogger("main")
+    def __init__(self):
+        super().__init__(
+            application_name="template_project_python",
+            version=__version__,
+            application_config_schema_filepath=FILE_DIR / "resources/application_config_schema.json"
+        )
 
+    def add_arguments(self, argparser: argparse.ArgumentParser):
+        self.logm.info("init_argparse()")
 
-def init_argparser() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(usage="template_project_python <command> [<args>] <files>")
-    parser.add_argument(
-        "-v",
-        "--version",
-        help="Show version and exit",
-        action="version",
-        version=__version__,
-    )
-    return parser.parse_args(sys.argv[1:2])
+        argparser.add_argument("--example", type=str, default=None, help="Example")
 
+    def run(self, args: argparse.Namespace):
+        self.logm.info("run()")
+        self.logm.debug("run()")
 
-def init_logging() -> None:
-    try:
-        with open(LOGGING_CONFIG_NAME, "r") as f:
-            d = yaml.safe_load(f)
-            logging.config.dictConfig(d)
-        logger.info("Logging config loaded from file: %s", LOGGING_CONFIG_NAME)
-    except FileNotFoundError:
-        logging.basicConfig(stream=sys.stdout, format=LOGGING_DEFAULT_FORMAT, level=logging.INFO, force=True)
-        logger.info("No logging config (%s) found. Using default settings!", LOGGING_CONFIG_NAME)
-    except (ValueError, TypeError, AttributeError, ImportError) as e:
-        logger.error("Error reading logging config (%s):", LOGGING_CONFIG_NAME)
-        logger.error(e)
-        logger.error("Exiting...")
-        sys.exit(os.EX_CONFIG)
+        self.logm.info("Config: %s", self.application_config)
 
 
 def main() -> None:
-    args = init_argparser()
-    init_logging()
-
-    logger.info("FILE_DIR: %s", FILE_DIR)
-    with open(FILE_DIR / "resources/test_data.txt") as input_file:
-        logger.info("The data: %s", input_file.read())
+    application = Application()
+    application.start(sys.argv[1:])
 
 
 if __name__ == "__main__":

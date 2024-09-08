@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "example_parameter_integer": {
+      "type": "integer"
+    },
+    "example_parameter_string": {
+      "type": "string"
+    },
+    "example_parameter_float": {
+      "type": "number"
+    },
+    "additionalProperties": false
+  },
+  "required": [
+    "example_parameter_integer",
+    "example_parameter_string",
+    "example_parameter_float"
+  ]
+}

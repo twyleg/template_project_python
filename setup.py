@@ -11,7 +11,7 @@ def read(relative_filepath):
 def read_long_description() -> str:
     return read("README.md")
 
-
+# fmt: off
 setup(
     name="template_project_python",
     version=versioneer.get_version(),
@@ -26,7 +26,9 @@ setup(
     long_description=read_long_description(),
     long_description_content_type="text/markdown",
     include_package_data=True,
-    install_requires=["pyyaml~=6.0.2"],
+    install_requires=[
+        "simple-python-app"
+    ],
     entry_points={
         "console_scripts": [
             "template_project_python = template_project_python.main:main",
