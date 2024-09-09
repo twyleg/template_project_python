@@ -1,4 +1,4 @@
-# Copyright (C) 2023 twyleg
+# Copyright (C) 2024 twyleg
 import versioneer
 from pathlib import Path
 from setuptools import find_packages, setup
@@ -10,6 +10,7 @@ def read(relative_filepath):
 
 def read_long_description() -> str:
     return read("README.md")
+
 
 # fmt: off
 setup(

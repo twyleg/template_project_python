@@ -1,5 +1,4 @@
 # Copyright (C) 2024 twyleg
-import sys
 import argparse
 
 from pathlib import Path
@@ -14,11 +13,13 @@ FILE_DIR = Path(__file__).parent
 class Application(GenericApplication):
 
     def __init__(self):
+        # fmt: off
         super().__init__(
             application_name="template_project_python",
             version=__version__,
             application_config_schema_filepath=FILE_DIR / "resources/application_config_schema.json"
         )
+        # fmt: on
 
     def add_arguments(self, argparser: argparse.ArgumentParser):
         self.logm.info("init_argparse()")
@@ -34,7 +35,7 @@ class Application(GenericApplication):
 
 def main() -> None:
     application = Application()
-    application.start(sys.argv[1:])
+    application.start()
 
 
 if __name__ == "__main__":
