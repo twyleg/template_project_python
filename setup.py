@@ -1,4 +1,4 @@
-# Copyright (C) 2023 twyleg
+# Copyright (C) 2024 twyleg
 import versioneer
 from pathlib import Path
 from setuptools import find_packages, setup
@@ -12,6 +12,7 @@ def read_long_description() -> str:
     return read("README.md")
 
 
+# fmt: off
 setup(
     name="template_project_python",
     version=versioneer.get_version(),
@@ -26,7 +27,9 @@ setup(
     long_description=read_long_description(),
     long_description_content_type="text/markdown",
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "simple-python-app==0.1.1"
+    ],
     entry_points={
         "console_scripts": [
             "template_project_python = template_project_python.main:main",

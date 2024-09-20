@@ -1,31 +1,41 @@
-# Copyright (C) 2023 twyleg
-import sys
+# Copyright (C) 2024 twyleg
 import argparse
-import logging
 
 from pathlib import Path
+from simple_python_app.generic_application import GenericApplication
+
 from template_project_python import __version__
 
+
 FILE_DIR = Path(__file__).parent
-FORMAT = "[%(asctime)s][%(levelname)s][%(name)s]: %(message)s"
+
+
+class Application(GenericApplication):
+
+    def __init__(self):
+        # fmt: off
+        super().__init__(
+            application_name="template_project_python",
+            version=__version__,
+            application_config_schema_filepath=FILE_DIR / "resources/application_config_schema.json"
+        )
+        # fmt: on
+
+    def add_arguments(self, argparser: argparse.ArgumentParser):
+        self.logm.info("init_argparse()")
+
+        argparser.add_argument("--example", type=str, default=None, help="Example")
+
+    def run(self, args: argparse.Namespace):
+        self.logm.info("run()")
+        self.logm.debug("run()")
+
+        self.logm.info("Config: %s", self.application_config)
 
 
 def main() -> None:
-    logging.basicConfig(stream=sys.stdout, format=FORMAT, level=logging.INFO)
-
-    parser = argparse.ArgumentParser(usage="template_project_python <command> [<args>] <files>")
-    parser.add_argument(
-        "-v",
-        "--version",
-        help="Show version and exit",
-        action="version",
-        version=__version__,
-    )
-    args = parser.parse_args(sys.argv[1:2])
-
-    logging.info("FILE_DIR: %s", FILE_DIR)
-    with open(FILE_DIR / "resources/test_data.txt") as input_file:
-        logging.info("The data: %s", input_file.read())
+    application = Application()
+    application.start()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,5 @@
+{
+  "example_parameter_integer": 42,
+  "example_parameter_string": "foo",
+  "example_parameter_float": 3.14
+}
