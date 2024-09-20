@@ -1,3 +1,4 @@
+# Dev
 setuptools~=73.0.1
 build~=1.2.2
 wheel~=0.44.0
@@ -8,8 +9,18 @@ tox~=4.18.0
 versioneer~=0.29
 pytest~=8.3.2
 pyinstaller~=6.10.0
-pyyaml~=6.0.2
-types-PyYAML~=6.0.12.20240808
-simple-python-app
 
+# Docs
+sphinx~=7.4.7
+sphinx-rtd-theme~=2.0.0
+sphinx-copybutton~=0.5.2
+sphinx-autobuild~=2024.4.16
+sphinxcontrib.asciinema~=0.4.2
+furo~=2024.8.6
+
+# Runtime deps
+simple-python-app==0.1.1
+
+# Template project
 template-project-utils~=0.1.0
+

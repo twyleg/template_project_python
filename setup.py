@@ -28,7 +28,7 @@ setup(
     long_description_content_type="text/markdown",
     include_package_data=True,
     install_requires=[
-        "simple-python-app"
+        "simple-python-app==0.1.1"
     ],
     entry_points={
         "console_scripts": [
