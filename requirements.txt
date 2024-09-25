@@ -7,3 +7,13 @@ tox~=4.11.4
 versioneer~=0.29
 pyinstaller
 template-project-utils
+
+flask~=2.3.3
+werkzeug~=2.3.7
+peewee~=3.17.0
+types-peewee~=3.17.0.0
+jsonschema~=4.20.0
+types-jsonschema~=4.20.0.0
+psycopg2-binary~=2.9.9
+types-psycopg2~=2.9.21.20
+pytest-postgresql~=5.0.0
