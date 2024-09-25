@@ -1,8 +1,8 @@
 placeholder: template_project_python
 
 update_files:
-  - docs/index.rst
-  - docs/conf.py
+  - docs/src/index.rst
+  - docs/src/conf.py
   - .gitattributes
   - README.md
   - MANIFEST.in
@@ -15,6 +15,7 @@ update_files:
   - scripts/pyinstaller_entry_point.py
 
 rename_files:
+  - template_project_python_config.json
 
 rename_dirs:
   - template_project_python/
