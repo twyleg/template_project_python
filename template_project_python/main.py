@@ -32,12 +32,12 @@ class Timer(QObject, metaclass=PropertyMeta):
 
     def __init__(self, name: str, millis: int = 0, seconds: int = 0, minutes: int = 0, hours: int = 0) -> None:
         QObject.__init__(self)
-        self.name = name
-        self.state = State.RESET
-        self.millis = millis
-        self.seconds = seconds
-        self.minutes = minutes
-        self.hours = hours
+        self.name = name  # type: ignore
+        self.state = State.RESET  # type: ignore
+        self.millis = millis  # type: ignore
+        self.seconds = seconds  # type: ignore
+        self.minutes = minutes  # type: ignore
+        self.hours = hours  # type: ignore
 
         self.count_ns = 0
         self.last_timestamp_ns = 0
@@ -47,29 +47,29 @@ class Timer(QObject, metaclass=PropertyMeta):
     @Slot()
     def start(self) -> None:
         self.last_timestamp_ns = time.time_ns()
-        self.state = State.RUNNING
+        self.state = State.RUNNING  # type: ignore
         self.logm.info("Started")
 
     @Slot()
     def pause(self) -> None:
-        self.state = State.PAUSED
+        self.state = State.PAUSED  # type: ignore
         self.logm.info("Paused at %d", self.count_ns)
 
     @Slot()
     def reset(self) -> None:
         self.logm.info("Reset at %d", self.count_ns)
         self.count_ns = 0
-        self.state = State.RESET
+        self.state = State.RESET  # type: ignore
         self.update()
 
     @Slot()
     def start_stop(self) -> None:
         state = self.state
-        if state == State.RESET:
+        if state == State.RESET:  # type: ignore
             self.start()
-        elif state == State.PAUSED:
+        elif state == State.PAUSED:  # type: ignore
             self.start()
-        elif state == State.RUNNING:
+        elif state == State.RUNNING:  # type: ignore
             self.pause()
 
     def update(self):
@@ -84,7 +84,7 @@ class Timer(QObject, metaclass=PropertyMeta):
         self.millis = count_ms % 1000
         self.seconds = (count_ms // 1000) % 60
         self.minutes = (count_ms // (1000 * 60)) % 60
-        self.hours = (count_ms // (1000 * 60 * 60))
+        self.hours = count_ms // (1000 * 60 * 60)
 
 
 class StopwatchModel(QObject, metaclass=PropertyMeta):
@@ -96,9 +96,9 @@ class StopwatchModel(QObject, metaclass=PropertyMeta):
         QObject.__init__(self)
         self.logm = logging.getLogger("stopwatch_model")
         self.timer_counter = 0
-        self.timers = []
+        self.timers = []  # type: ignore
         self.add_timer()
-        self.active_timer = self.timers[0]
+        self.active_timer = self.timers[0]  # type: ignore
 
     @Slot()
     def add_timer(self):
@@ -109,11 +109,11 @@ class StopwatchModel(QObject, metaclass=PropertyMeta):
 
     @Slot(Timer)
     def activate_timer(self, timer: Timer):
-        self.active_timer = timer
+        self.active_timer = timer  # type: ignore
         self.logm.info("Activated timer: %s", timer.name)
 
     def update_timers(self) -> None:
-        for timer in self.timers:
+        for timer in self.timers:  # type: ignore
             timer.update()
 
 
