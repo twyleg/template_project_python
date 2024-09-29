@@ -1,4 +1,5 @@
-placeholder: template_project_python
+placeholder:
+  - template_project_python
 
 update_files:
   - docs/src/index.rst
