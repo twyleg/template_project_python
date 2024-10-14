@@ -14,7 +14,7 @@ update_files:
   - pyinstaller.spec
   - template_project_python/__main__.py
   - template_project_python/main.py
-  - scripts/pyinstaller_entry_point.py
+  # - scripts/pyinstaller_entry_point.py
 
 rename_files:
   - template_project_python_config.json
