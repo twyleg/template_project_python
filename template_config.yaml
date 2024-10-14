@@ -1,4 +1,6 @@
-placeholder: template_project_python
+placeholder:
+  - template_project_python
+  - template-project-python
 
 update_files:
   - docs/src/index.rst
@@ -22,5 +24,6 @@ rename_dirs:
 
 remove_files:
   - template_config.yaml
+  - .github/workflows/test_template_initializer.yaml
 
 remove_dirs:
