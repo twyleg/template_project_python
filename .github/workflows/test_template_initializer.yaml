@@ -16,7 +16,7 @@ jobs:
           python-version: 3.12
       - run: pip install template-project-utils
       - name: Initialize template
-        run: template-project-utils template_project_python=new_project_name template-project-python=new-project-name
+        run: template_project_utils template_project_python=new_project_name template-project-python=new-project-name
       - name: Test template initializer
         uses: twyleg/github_action_test_template_project_initializer@master
         with:
