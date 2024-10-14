@@ -14,11 +14,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
-      - run: pip install template-project-utils
+      - name: Install template-project-utils
+        run: pip install template-project-utils
       - name: Initialize template
         run: template_project_utils template_project_python=new_project_name template-project-python=new-project-name
       - name: Test template initializer
-        uses: twyleg/github_action_test_template_project_initializer@master
+        uses: twyleg/github_action_test_template_project_initializer@v1
         with:
           search_keywords: template_project_python,template-project-python
           exclude_dirs: .git/,venv/,.tox/,.mypy_cache/,.idea/,build/,dist/,__pycache__/,*.egg-info/,logs/
