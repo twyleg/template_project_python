@@ -21,4 +21,4 @@ jobs:
         uses: twyleg/github_action_test_template_project_initializer@master
         with:
           search_keywords: template_project_python,template-project-python
-          exclude_dirs: .git/,venv/,.tox/,.mypy_cache/,.idea/,build/,dist/,__pycache__/,*.egg-info/
+          exclude_dirs: .git/,venv/,.tox/,.mypy_cache/,.idea/,build/,dist/,__pycache__/,*.egg-info/,logs/
