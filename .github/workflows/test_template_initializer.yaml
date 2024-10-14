@@ -1,0 +1,24 @@
+name: test_template_initializer
+run-name: test_template_initializer
+on:
+  workflow_call:
+
+  push:
+    branches:
+      - "**"
+jobs:
+  test_template_initializer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - run: pip install template-project-utils
+      - name: Initialize template
+        run: template-project-utils template_project_python=new_project_name template-project-python=new-project-name
+      - name: Test template initializer
+        uses: twyleg/github_action_test_template_project_initializer@master
+        with:
+          search_keywords: template_project_python,template-project-python
+          exclude_dirs: .git/,venv/,.tox/,.mypy_cache/,.idea/,build/,dist/,__pycache__/,*.egg-info/
